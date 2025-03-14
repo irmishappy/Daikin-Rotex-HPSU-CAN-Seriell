@@ -16,6 +16,17 @@ FetchContent_Declare(
 # GoogleTest in das Projekt einbinden
 FetchContent_MakeAvailable(googletest)
 
+include(FetchContent)
+FetchContent_Declare(
+    esphome
+    GIT_REPOSITORY https://github.com/esphome/esphome.git
+    GIT_TAG release-2023.10.0  # Wähle die Version, die du verwenden möchtest
+)
+
+FetchContent_MakeAvailable(esphome)
+
+include_directories(${esphome_SOURCE_DIR}/esphome/core)
+
 # Dein Quellcode und Testdateien hinzufügen
 add_executable(MyTests test.cpp)
 
