@@ -57,6 +57,7 @@ jobs:
         run: |
           ls -al
 
+          cd components/daikin_rotex_can/tests
           cmake . -B build
           cmake --build build
           build/tests
