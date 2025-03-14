@@ -20,7 +20,7 @@ include(FetchContent)
 FetchContent_Declare(
     esphome
     GIT_REPOSITORY https://github.com/esphome/esphome.git
-    GIT_TAG release-2023.10.0  # Wähle die Version, die du verwenden möchtest
+    GIT_TAG 2025.2.2
 )
 
 FetchContent_MakeAvailable(esphome)
